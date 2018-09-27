@@ -11,14 +11,13 @@ Pod::Spec.new do |s|
   s.version      = package["version"]
   s.homepage     = "https://github.com/author/RNSiriShortcuts"
   s.license      = "MIT"
-  # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author       = { "author" => "author@domain.cn" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/author/RNSiriShortcuts.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m}"
+  s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
+  s.pod_target_xcconfig = {"DEFINES_MODULE" => 'YES'}
 
   s.dependency "React"
-  #s.dependency "others"
 end
